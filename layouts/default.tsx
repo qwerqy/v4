@@ -1,3 +1,4 @@
+import Explorer from "../components/explorer";
 import Footer from "../components/footer";
 import Nav from "../components/nav";
 import Sidebar from "../components/sidebar";
@@ -8,6 +9,7 @@ const DefaultLayout: React.FC<{ children?: JSX.Element }> = ({ children }) => {
       <Nav />
       <div className="flex">
         <Sidebar />
+        <Explorer />
         <main>{children}</main>
       </div>
       <Footer />
