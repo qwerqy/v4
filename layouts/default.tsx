@@ -1,7 +1,9 @@
 import Explorer from "../components/explorer";
 import Footer from "../components/footer";
 import Nav from "../components/nav";
+import Overview from "../components/overview";
 import Sidebar from "../components/sidebar";
+import Tabs from "../components/tabs";
 
 const DefaultLayout: React.FC<{ children?: JSX.Element }> = ({ children }) => {
   return (
@@ -10,7 +12,13 @@ const DefaultLayout: React.FC<{ children?: JSX.Element }> = ({ children }) => {
       <div className="flex">
         <Sidebar />
         <Explorer />
-        <main>{children}</main>
+        <div>
+          <Tabs />
+          <div className="flex">
+            <main className="px-2 py-1 grow">{children}</main>
+            <Overview />
+          </div>
+        </div>
       </div>
       <Footer />
     </div>

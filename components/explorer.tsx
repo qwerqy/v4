@@ -1,11 +1,16 @@
 import Tree, { ReactTreeTheme } from "@naisutech/react-tree";
-import { VscFolderOpened, VscJson } from "react-icons/vsc";
+import { VscFolderOpened, VscJson, VscChevronRight } from "react-icons/vsc";
 import { SiTypescript } from "react-icons/si";
 
 const data = [
   {
-    id: 12345678,
+    id: 12345677,
     parentId: null,
+    label: "AMINROSLAN",
+  },
+  {
+    id: 12345678,
+    parentId: 12345677,
     label: "src",
     items: [
       {
@@ -31,7 +36,7 @@ const Explorer = () => {
   return (
     <div className="min-h-screen bg-base w-72 text-fillText py-4">
       <div>
-        <span>EXPLORER</span>
+        <span className="font-extrabold ml-10">EXPLORER</span>
       </div>
       <Tree
         nodes={data}
@@ -39,14 +44,17 @@ const Explorer = () => {
         theme="base"
         IconRenderer={({ data, type }) => {
           if (type === "node") {
+            if (data?.label === "AMINROSLAN") {
+              return <VscChevronRight />;
+            }
             return <VscFolderOpened />;
           }
 
           if (type === "leaf") {
             if (data?.label === "package.json") {
-              return <VscJson />;
+              return <VscJson color="#9DA038" />;
             }
-            return <SiTypescript />;
+            return <SiTypescript color="#43728D" />;
           }
 
           return <div />;
