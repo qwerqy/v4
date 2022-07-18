@@ -34,7 +34,7 @@ const data = [
 
 const Explorer = () => {
   return (
-    <div className="min-h-screen bg-base w-72 text-fillText py-4">
+    <div className="min-h-screen bg-base text-fillText py-4 hidden lg:block">
       <div>
         <span className="font-extrabold ml-10">EXPLORER</span>
       </div>

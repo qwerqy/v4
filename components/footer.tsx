@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="bg-fill text-fillText rounded-b-xl flex justify-between">
+    <div className="bg-fill text-fillText text-xs sm:text-sm rounded-b-xl flex justify-between w-full overflow-x-auto">
       <div className="flex flex-row py-1 px-6 gap-4 items-center">
         <div className="flex justify-center items-center gap-1">
           <VscSourceControl />
@@ -24,7 +24,7 @@ const Footer = () => {
           <span>0</span>
         </div>
       </div>
-      <div className="flex flex-row py-1 px-6 gap-4 items-center">
+      <div className="flex flex-row py-1 px-6 gap-1 sm:gap-4 items-center">
         <div>
           <span>Ln 1, Col 1</span>
         </div>

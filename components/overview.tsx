@@ -1,5 +1,7 @@
 const Overview = () => {
-  return <div className="min-h-screen bg-base w-72 text-fillText"></div>;
+  return (
+    <div className="min-h-screen hidden md:block bg-base text-fillText"></div>
+  );
 };
 
 export default Overview;
